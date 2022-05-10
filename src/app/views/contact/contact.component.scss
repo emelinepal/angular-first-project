@@ -1,0 +1,68 @@
+$white: #fdfefc;
+
+.content {
+	margin: 5rem auto 2rem;
+	max-width: 1150px;
+
+	h2 {
+		font-size: 3rem;
+	}
+
+	.card {
+		padding: 15px;
+		background: $white;
+		border-radius: 15px;
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	}
+
+	form {
+		.form-group {
+			margin-bottom: 1rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			label {
+				font-weight: bold;
+				color: #000;
+				margin-left: 7.5px;
+			}
+
+			input, textarea {
+				border-radius: 10px;
+				width: calc(100% - 20px);
+				padding: 10px;
+				margin-top: 5px;
+
+				border: 1px solid #6489ac;
+
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+
+		button.btn {
+			padding: 10px 15px;
+			font-weight: bold;
+			text-transform: uppercase;
+			border-radius: 10px;
+
+			border: 1px solid;
+
+			transition: .3s;
+			cursor: pointer;
+
+			&.btn-success {
+				background-color: aquamarine;
+				border-color: darken(aquamarine, 10);
+			}
+
+			&:hover {
+				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+				transform: translateZ(30px);
+			}
+		}
+	}
+}
