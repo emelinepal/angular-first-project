@@ -1,3 +1,4 @@
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -6,16 +7,19 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ErrorComponent } from './views/error/error.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FieldContainerComponent } from './components/field-container/field-container.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		NavBarComponent,
-		ErrorComponent,
-		FieldContainerComponent
+		ErrorComponent
 	],
-	imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+	imports: [
+		BrowserModule,
+		HttpClientModule,
+		AppRoutingModule,
+		ReactiveFormsModule
+	],
 	providers: [],
 	bootstrap: [AppComponent],
 })
