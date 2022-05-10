@@ -53,22 +53,22 @@ $dark: #0f0F0F;
                     margin: 7px 8px;
                     cursor: pointer;
                     padding: 13px 2vw;
-                    color: $dark-blue;
+                    color: $dark;
                     border-radius: 50px;
                     transition: all .1s;
-                    font-weight: 500;
+                    font-weight: 600;
                     font-size: 16px;
                     letter-spacing: 1px;
                     white-space: nowrap;
-                    border: 2px solid white;
+                    border: 3px solid white;
                     
                     &:hover, &:focus{
-                        border: 2px solid $dark-blue;
+                        border: 3px solid $dark;
                     } 
                     
                     &.active{
-                        border: 2px solid $dark-blue;
-                        background: $dark-blue;
+                        border: 3px solid $dark;
+                        background: $dark;
                         color: $white;
                     }
                 }

@@ -5,8 +5,11 @@ import { ErrorModule } from './views/error/error/error.module';
 
 const routes: Routes = [
 	{
-		path: '',
-		component: HomeComponent
+		path: '', 
+		pathMatch: 'full',
+		loadChildren: () =>
+			import('./views/home/home.module')
+				.then((module) => module.HomeModule),
 	},
 	{
 		path: 'about-us',
@@ -43,7 +46,7 @@ const routes: Routes = [
 	},
 	{
 		path: '**',
-		redirectTo: 'error'
+		redirectTo: '/error'
 	},
 ];
 

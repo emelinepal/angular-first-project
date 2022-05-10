@@ -1,6 +1,6 @@
-<main>
+<main [ngClass]="{'luigi-triggered':isTriggeredLuigi}">
     <section class="flex align-center no-margin hero-section">
-        <div class="w-50 col-p">
+        <div class="w-50 p-right">
             <h1>
                 Discover our
                 <br>
@@ -9,12 +9,12 @@
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at nunc id leo pretium tempus. Nulla finibus leo at neque efficitur pellentesque.
             </p>
-            <button class="btn">
+            <button class="btn" (click)="triggerLuigi()">
                 Let's go 
             </button>
         </div>
         <div class="w-50 lp-img">
-            <video width="100%" height="100%" autoplay autobuffer="true" loop=true controls=0 poster="/assets/img/lp-img.webp">
+            <video width="100%" height="100%" autoplay autobuffer="true" loop=true poster="/assets/img/lp-img.webp">
                 <source src="/assets/video/lp-img.mp4" type="video/mp4">
             </video>
         </div>

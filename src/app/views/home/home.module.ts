@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
 	{
@@ -11,11 +12,14 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     CommonModule,
-	RouterModule.forChild(routes),
+	  RouterModule.forChild(routes),
+    FormsModule
   ]
 })
-export class HomeModule { }
+export class HomeModule { 
+	isTriggeredLuigi = false;
+}

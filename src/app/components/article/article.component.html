@@ -1,0 +1,14 @@
+<article class="article-item" [ngClass]="{'item--liked':liked}" (click)="likeArticle(content.index)">
+    <div class="article-img">
+        <img src={{content.img}} alt="">
+    </div>
+    <div>
+        <h3>{{content.title}}</h3>
+        <p>{{content.description}}</p>
+    </div>
+    <div class='heart-button-container'>
+        <div class='heart-button'>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M17.867 3.493l4.133 3.444v5.127l-10 8.333-10-8.334v-5.126l4.133-3.444 5.867 3.911 5.867-3.911zm.133-2.493l-6 4-6-4-6 5v7l12 10 12-10v-7l-6-5z"/></svg>
+        </div>
+    </div>
+</article>

@@ -9,3 +9,13 @@
 
 	<button (click)="addUser()" class="btn btn-dark">Ajouter</button>
 </div>
+
+<div id="team-list">
+	<app-member *ngFor="let user of users"
+				[id]="user.id ? user.id : 0"
+				[firstname]="user.firstname"
+				[lastname]="user.lastname"
+				[framework]="user.framework"
+				(removeUser)="removeUser($event)">
+	</app-member>
+</div>
