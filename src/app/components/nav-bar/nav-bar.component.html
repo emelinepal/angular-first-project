@@ -6,23 +6,23 @@
         </div>
         <div class="nav-links desktop-only">
             <ul class="nav-links-list">
-                <li class="nav-link">
-                    <a>Blog</a>
+                <li class="nav-link" routerLink="/blog">
+                    Blog
                 </li>
-                <li class="nav-link">
-                    <a>News</a>
+                <li class="nav-link" routerLink="/news">
+                    News
                 </li>
-                <li class="nav-link">
-                    <a>Team</a>
+                <li class="nav-link" routerLink="/team">
+                    Team
                 </li>
-                <li class="nav-link">
-                    <a>Jobs</a>
+                <li class="nav-link" routerLink="/jobs">
+                    Jobs
                 </li>
-                <li class="nav-link">
-                    <a>Contact</a>
+                <li class="nav-link" routerLink="/contact">
+                    Contact
                 </li>
-                <li class="nav-link">
-                    <a>About us</a>
+                <li class="nav-link" routerLink="/about-us">
+                    About us
                 </li>
             </ul>
         </div>
@@ -40,10 +40,24 @@
 
     <div class="nav-mobile">
         <div class="nav-links" [ngClass]="{'fade-in' : mobileMenuOpen}">
-            <a href="" class="link">Home</a>
-            <a href="" class="link">Contact</a>
-            <a href="" class="link">Profile</a>
-            <a href="" class="link">About</a>
+            <li class="nav-link" routerLink="/blog">
+				Blog
+			</li>
+			<li class="nav-link" routerLink="/news">
+				News
+			</li>
+			<li class="nav-link" routerLink="/team">
+				Team
+			</li>
+			<li class="nav-link" routerLink="/jobs">
+				Jobs
+			</li>
+			<li class="nav-link" routerLink="/contact">
+				Contact
+			</li>
+			<li class="nav-link" routerLink="/about-us">
+				About us
+			</li>
         </div>
     </div>
 </nav>
