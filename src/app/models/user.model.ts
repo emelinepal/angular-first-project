@@ -1,5 +1,5 @@
 export interface UserModel {
-	id: number,
+	id?: number,
 	firstname: string,
 	lastname: string,
 	framework: Framework

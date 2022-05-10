@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TeamComponent } from './team.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { MemberComponent } from './component/member/member.component';
 
 const routes: Routes = [
 	{
@@ -13,6 +14,7 @@ const routes: Routes = [
 @NgModule({
 	declarations: [
 		TeamComponent,
+		MemberComponent,
 	],
 	imports: [
 		CommonModule,

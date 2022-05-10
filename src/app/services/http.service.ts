@@ -15,21 +15,30 @@ export class HttpService {
 	}
 
 	getUsers () {
-		return this.httpClient.get(`${this.backUrl}/users`)
+		return this.httpClient.get<Array<UserModel>>(`${this.backUrl}/users`)
 			.pipe(
-				tap((response) => {
-					console.log(response)
-					// this.userStore.saveUsers()
+				tap((users) => {
+					this.userStore.saveUsers(users)
 				})
 			)
 			.subscribe()
 	}
 
 	addUser (user: UserModel) {
-		return this.httpClient.post(`${this.backUrl}/users`, user)
+		return this.httpClient.post<UserModel>(`${this.backUrl}/users`, user)
 			.pipe(
-				tap((response) => {
-					console.log(response)
+				tap((user) => {
+					this.userStore.addUser(user)
+				})
+			)
+			.subscribe()
+	}
+
+	removeUser (userId: number) {
+		return this.httpClient.delete(`${this.backUrl}/users/${userId}`)
+			.pipe(
+				tap(() => {
+					this.userStore.removeUser(userId)
 				})
 			)
 			.subscribe()

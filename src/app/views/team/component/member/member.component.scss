@@ -1,0 +1,41 @@
+.member-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-bottom: 10px;
+	padding: 7.5px 10px;
+
+	background-color: #ffffff;
+	color: #000000;
+
+	border-radius: 5px;
+
+	min-width: 400px;
+
+	.member-details {
+		display: flex;
+		align-items: center;
+
+		img {
+			width: 20px;
+		}
+
+		span {
+			margin-left: 10px;
+		}
+	}
+
+	button {
+		color: #ffffff;
+		background-color: darkred;
+
+		font-size: .75rem;
+
+		padding: 7.5px 10px;
+		border-radius: 5px;
+		border: none;
+
+		cursor: pointer;
+	}
+}
