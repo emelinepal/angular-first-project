@@ -47,7 +47,7 @@ export class TeamComponent implements OnInit {
 				lastname: lastname,
 				framework: framework
 			}
-			console.log(user)
+
 			this.httpService.addUser(user)
 		}
 	}

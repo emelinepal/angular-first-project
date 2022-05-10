@@ -20,7 +20,7 @@ export class MemberComponent implements OnInit {
 	}
 
 	get frameworkImg () {
-		return `../../../../assets/img/${this.framework}.png`
+		return `../../../../assets/img/${this.framework.trim().toLowerCase()}.png`
 	}
 
 	emitRemoveUser () {
