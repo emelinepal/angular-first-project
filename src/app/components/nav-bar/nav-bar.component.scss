@@ -10,7 +10,9 @@ $grey: #afafaf;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 40px 5vw;
+        margin: 40px 4vw;
+        position: relative;
+        z-index: 3;
 
         .brand-logo{
             margin-right: 15px;
@@ -65,24 +67,31 @@ $grey: #afafaf;
                 }
             }
         }
-    }
 
-    .nav-mobile{
-        display: none;
-
-        @media (max-width: 900px) {
-            display: flex;
+        .nav-mobile{
+            display: none;
+            min-width: 52px;
+            align-items: center;
+            justify-content: center;
+            
+            @media (max-width: 900px) {
+                display: flex;
+            }
         }
 
         .nav-mobile-btn{
             background: #fff;
-            padding: 13px 2vw;
+            padding: 13px 3vw 13px 2vw;
             border-radius: 50px;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            cursor: pointer;
+            z-index: 10;
+            min-width: 40px;
 
             .menu-btn {
                 padding: 0;
                 width: 30px;
-                cursor: pointer;
                 z-index: 2;
 
                 .line {
@@ -128,6 +137,53 @@ $grey: #afafaf;
                 }
 
                 
+            }
+        }
+    }
+
+    > .nav-mobile{
+        display: flex;
+        background: white;
+        position: absolute;
+        right: -100%;
+        transition: all 700ms;
+        height: 100vh;
+        flex-direction: column;
+        top: 0;
+        color: black;
+        z-index: 1;
+        min-width: 320px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 200px 20px;
+
+            .nav-link{
+                margin: 7px 8px;
+                cursor: pointer;
+                padding: 13px 2vw;
+                color: $grey;
+                border-radius: 50px;
+                transition: all .1s;
+                font-weight: 500;
+                font-size: 16px;
+                letter-spacing: 1px;
+                white-space: nowrap;
+                
+                &:hover, &:focus, &.active{
+                    background: $light-blue;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.nav-open{
+        > .nav-mobile{
+            @media (max-width: 900px) {
+                right: 0;
             }
         }
     }
