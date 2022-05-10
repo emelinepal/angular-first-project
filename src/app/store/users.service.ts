@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { UserModel } from "../models/user.model";
+import { HttpService } from "../services/http.service";
 
 @Injectable({
 	providedIn: 'root'
@@ -8,7 +9,7 @@ export class UsersService {
 
 	users: Array<UserModel> = []
 
-	constructor () {
+	constructor (public httpService: HttpService) {
 	}
 
 	getUsers () {
@@ -20,6 +21,6 @@ export class UsersService {
 	}
 
 	addUser (user: UserModel) {
-		this.users.push(user)
+		this.httpService.addUser(user)
 	}
 }
