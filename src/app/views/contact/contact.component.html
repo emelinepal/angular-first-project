@@ -3,13 +3,14 @@
 	<div class="content">
 		<h2>Contactez nous !</h2>
 
-	<div class="card" [formGroup]="form">
-		<form>
-			<app-text-input [control]="formSubject" id="subject" label="Sujet"></app-text-input>
-			<app-text-input [control]="formEmail" id="email" label="Addresse email"></app-text-input>
-			<app-textarea-input [control]="formMessage" id="message" label="Message"></app-textarea-input>
+		<div class="card" [formGroup]="form">
+			<form>
+				<app-text-input [control]="formSubject" id="subject" label="Sujet"></app-text-input>
+				<app-text-input [control]="formEmail" id="email" label="Addresse email"></app-text-input>
+				<app-textarea-input [control]="formMessage" id="message" label="Message"></app-textarea-input>
 
-			<button class="btn btn-dark">Envoyer</button>
-		</form>
+				<button class="btn btn-dark">Envoyer</button>
+			</form>
+		</div>
 	</div>
 </main>
