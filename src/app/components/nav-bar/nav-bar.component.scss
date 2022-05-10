@@ -1,8 +1,9 @@
-$light-blue: #6489ac;
-$dark-blue: #466e9e;
+$light-blue: #0060b9;
+$dark-blue: #00295b;
 $cyan: #8ed7e5;
 $white: #fdfefc;
 $grey: #afafaf;
+$dark: #0f0F0F;
 
 #app-nav{
 
@@ -52,7 +53,7 @@ $grey: #afafaf;
                     margin: 7px 8px;
                     cursor: pointer;
                     padding: 13px 2vw;
-                    color: $light-blue;
+                    color: $dark-blue;
                     border-radius: 50px;
                     transition: all .1s;
                     font-weight: 500;
@@ -62,12 +63,12 @@ $grey: #afafaf;
                     border: 2px solid white;
                     
                     &:hover, &:focus{
-                        border: 2px solid $light-blue;
+                        border: 2px solid $dark-blue;
                     } 
                     
                     &.active{
-                        border: 2px solid $light-blue;
-                        background: $light-blue;
+                        border: 2px solid $dark-blue;
+                        background: $dark-blue;
                         color: $white;
                     }
                 }
@@ -103,7 +104,7 @@ $grey: #afafaf;
                 .line {
                     padding: 0;
                     width: 30px;
-                    background: $light-blue;
+                    background: $dark-blue;
                     height: 2px;
                     margin: 5px 0;
                     transition: all 700ms cubic-bezier(.9, 0, .33, 1);
@@ -179,7 +180,7 @@ $grey: #afafaf;
                 white-space: nowrap;
                 
                 &:hover, &:focus, &.active{
-                    background: $light-blue;
+                    background: $dark-blue;
                     color: $white;
                 }
             }

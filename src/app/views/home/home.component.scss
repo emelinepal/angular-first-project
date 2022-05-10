@@ -1,0 +1,41 @@
+.lp-img{
+    overflow: hidden;
+    border-top-left-radius: 75%;
+    border-bottom-left-radius: 75%;
+    pointer-events: none;
+}
+
+section{
+    min-height: 70vh;
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &.no-margin{
+        margin: 0 0px;
+    }
+
+    .w-50{
+        width: 50vw;
+    }
+
+    .col-p{
+        padding: 10px 3vw;
+    }
+
+    &.hero-section{
+
+        p{
+            margin: 40px 0; 
+            line-height: 1.5;
+        }
+
+        h1{
+            margin: 0;
+            padding: 0;
+            font-size: 100px;
+            font-weight: 700;
+            line-height: .9;
+        }
+    }
+}
