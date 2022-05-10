@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./article.component.scss']
 })
 export class ArticleComponent implements OnInit {
-  clicked = false;
+  liked = false;
 
   @Input() content = {
     index: 0,
@@ -26,7 +26,7 @@ export class ArticleComponent implements OnInit {
   }
 
   likeArticle(value: number) {
-    this.clicked = true;
+    this.liked = !this.liked;
     this.articleIsLiked.emit(value);
   }
 
