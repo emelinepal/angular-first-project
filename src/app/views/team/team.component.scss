@@ -3,16 +3,67 @@ h1 {
 	margin: 1rem 5rem;
 }
 
-#team {
-	display: flex;
-	justify-content: center;
-	align-items: start;
+#team-list {
+	padding: 0 10px;
 
-	#team-form, #team-form {
-		width: 50%;
+	.list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		margin-top: 15px;
 	}
+	.filter {
+		.filter__frameworks {
+			display: flex;
+			align-items: center;
 
-	#team-list {
+			button {
+				background-color: #ffffff;
 
+				font-size: .75rem;
+
+				padding: 7.5px 10px;
+				margin: 0 10px;
+
+				border-radius: 5px;
+				border: none;
+
+				min-height: 32px;
+				min-width: 85px;
+
+				cursor: pointer;
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+				&.angular {
+					color: darkred;
+				}
+
+				&.react {
+					color: darkblue;
+				}
+
+				&.vue {
+					color: darkgreen;
+				}
+
+				.option-item {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					img {
+						width: 15px;
+					}
+
+					span {
+						margin-left: 5px;
+					}
+				}
+			}
+		}
 	}
 }

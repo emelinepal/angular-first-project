@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TeamComponent } from './team.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { MemberComponent } from './component/member/member.component';
 
@@ -20,6 +20,7 @@ const routes: Routes = [
 		CommonModule,
 		ReactiveFormsModule,
 		RouterModule.forChild(routes),
+		FormsModule,
 	]
 })
 export class TeamModule {

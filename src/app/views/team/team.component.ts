@@ -16,6 +16,11 @@ export class TeamComponent implements OnInit {
 		framework: new FormControl(),
 	});
 
+	frameworks: Array<string> = ['angular', 'react', 'vue']
+
+	buttonFilter: string = '';
+	searchFilter: string = '';
+
 	constructor(public httpService: HttpService, public userStore: UsersService) {}
 
 	ngOnInit(): void {
@@ -36,6 +41,28 @@ export class TeamComponent implements OnInit {
 		return this.formGrp.get('framework');
 	}
 
+	get filteredUsers () {
+		if (this.buttonFilter) {
+			return this.users.filter((user) => user.framework === this.buttonFilter)
+		} else if (this.searchFilter) {
+			const search = this.searchFilter.trim().toLowerCase()
+			return this.users.filter((user) =>
+				user.firstname.toLowerCase().includes(search)
+				|| user.lastname.toLowerCase().includes(search)
+				|| user.framework.toLowerCase().includes(search))
+		} else {
+			return this.users
+		}
+	}
+
+	getUsersCountPerFramework (framework: string) {
+		return this.users.filter((user) => user.framework === framework).length
+	}
+
+	getFrameworkImg (framework: string) {
+		return `../../../assets/img/${framework}.png`
+	}
+
 	addUser() {
 		const firstname = this.formFirstName?.value
 		const lastname = this.formLastName?.value
@@ -54,5 +81,9 @@ export class TeamComponent implements OnInit {
 
 	removeUser (userId: number) {
 		this.httpService.removeUser(userId)
+	}
+
+	filterUsers (framework: string) {
+		this.buttonFilter = framework
 	}
 }

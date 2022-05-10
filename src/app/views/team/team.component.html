@@ -27,13 +27,37 @@
 	</div>
 
 	<div id="team-list">
-		<app-member *ngFor="let user of users"
-					[id]="user.id ? user.id : 0"
-					[firstname]="user.firstname"
-					[lastname]="user.lastname"
-					[framework]="user.framework"
-					(removeUser)="removeUser($event)">
-		</app-member>
+		<h2>Our Dream Team</h2>
+		<div class="filter">
+			<h3>Filtres</h3>
+			<div class="filter__frameworks">
+				<button *ngFor="let framework of frameworks" class="angular" (click)="filterUsers(framework)">
+					<div class="option-item">
+						<img [src]="getFrameworkImg(framework)" alt="framework" />
+						<span>
+							{{ framework.charAt(0).toUpperCase() + framework.slice(1, framework.length) }}
+							({{ getUsersCountPerFramework(framework) }})
+						</span>
+					</div>
+				</button>
+				<button (click)="filterUsers('')">
+					<div class="option-item">
+						<span>Reset</span>
+					</div>
+				</button>
+				<input [(ngModel)]="searchFilter" name="search" type="search" />
+			</div>
+		</div>
+		<h3>Liste</h3>
+		<div class="list">
+			<app-member *ngFor="let user of filteredUsers"
+						[id]="user.id ? user.id : 0"
+						[firstname]="user.firstname"
+						[lastname]="user.lastname"
+						[framework]="user.framework"
+						(removeUser)="removeUser($event)">
+			</app-member>
+		</div>
 	</div>
 </div>
 
