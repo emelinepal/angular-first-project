@@ -5,51 +5,131 @@ $white: #fdfefc;
 $grey: #afafaf;
 
 #app-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 40px 7vw;
 
-    .brand-logo{
-        margin-right: 15px;
-    }
+    .nav-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 40px 5vw;
 
-    .brand-name{
-        color: $white;
-        font-size: 28px;
-        font-weight: 500;
-        letter-spacing: 2px;
-    }
+        .brand-logo{
+            margin-right: 15px;
+        }
+    
+        .brand-name{
+            color: $white;
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 2px;
 
-    .nav-links{
-        padding: 5px;
-        background: $white;
-        border-radius: 100px;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
-        .nav-links-list{
-            display: flex;
-            align-items: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-
-            .nav-link{
-                margin: 7px;
-                cursor: pointer;
-                padding: 13px 30px;
-                color: $grey;
-                border-radius: 50px;
-                transition: all .1s;
-                font-weight: 500;
-                font-size: 16px;
-                letter-spacing: 1px;
-                
-                &:hover, &:focus, &.active{
-                    background: $light-blue;
-                    color: $white;
+            @media (max-width: 900px) {
+                font-size: 1.5rem;
+            }
+        }
+    
+        .nav-links{
+            padding: 5px;
+            background: $white;
+            border-radius: 100px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+            &.desktop-only{
+                @media (max-width: 900px) {
+                    display: none;
+                }
+            }
+    
+            .nav-links-list{
+                display: flex;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+    
+                .nav-link{
+                    margin: 7px 8px;
+                    cursor: pointer;
+                    padding: 13px 2vw;
+                    color: $grey;
+                    border-radius: 50px;
+                    transition: all .1s;
+                    font-weight: 500;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    white-space: nowrap;
+                    
+                    &:hover, &:focus, &.active{
+                        background: $light-blue;
+                        color: $white;
+                    }
                 }
             }
         }
     }
+
+    .nav-mobile{
+        display: none;
+
+        @media (max-width: 900px) {
+            display: flex;
+        }
+
+        .nav-mobile-btn{
+            background: #fff;
+            padding: 13px 2vw;
+            border-radius: 50px;
+
+            .menu-btn {
+                padding: 0;
+                width: 30px;
+                cursor: pointer;
+                z-index: 2;
+
+                .line {
+                    padding: 0;
+                    width: 30px;
+                    background: $light-blue;
+                    height: 2px;
+                    margin: 5px 0;
+                    transition: all 700ms cubic-bezier(.9, 0, .33, 1);
+
+                    &.line--1 {
+                        width: 30px;
+                        transform: rotate(0) translateY(0);
+                    }
+                    
+                    &.line--1.line-cross {
+                        width: 30px;
+                        transform: rotate(45deg) translateY(10px);
+                         background: rgba(0,0,0,0.6);
+                    }
+                    
+                    &.line--2 {
+                        width: 28px;
+                        transform: translateX(0);
+                    }
+                    
+                    &.line--2.line-fade-out {
+                        width: 28px;
+                        transform: translate(30px);
+                        opacity: 0;
+                    }
+                    
+                    &.line--3 {
+                        width: 20px;
+                        transform: rotate(0) translateY(0);
+                    }
+                    
+                    &.line--3.line-cross {
+                        width: 30px;
+                        transform: rotate(-45deg) translateY(-10px);
+                         background: rgba(0,0,0,0.6);
+                    }
+                }
+
+                
+            }
+        }
+    }
+
 }
