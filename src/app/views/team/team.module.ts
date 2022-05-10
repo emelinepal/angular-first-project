@@ -11,13 +11,14 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [
-    TeamComponent,
-  ],
-  imports: [
-    CommonModule,
-	ReactiveFormsModule,
-	RouterModule.forChild(routes),
-  ]
+	declarations: [
+		TeamComponent,
+	],
+	imports: [
+		CommonModule,
+		ReactiveFormsModule,
+		RouterModule.forChild(routes),
+	]
 })
-export class TeamModule { }
+export class TeamModule {
+}
