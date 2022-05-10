@@ -25,3 +25,11 @@ body{
 .justify-between{
     justify-content: space-between;
 }
+
+a {
+	text-decoration: none;
+}
+
+*[routerlink] {
+	cursor: pointer;
+}
