@@ -43,26 +43,6 @@ $white: #fdfefc;
 			}
 		}
 
-		button.btn {
-			padding: 10px 15px;
-			font-weight: bold;
-			text-transform: uppercase;
-			border-radius: 10px;
-
-			border: 1px solid;
-
-			transition: .3s;
-			cursor: pointer;
-
-			&.btn-success {
-				background-color: aquamarine;
-				border-color: darken(aquamarine, 10);
-			}
-
-			&:hover {
-				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-				transform: translateZ(30px);
-			}
-		}
+		
 	}
 }
