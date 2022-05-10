@@ -5,17 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ErrorComponent } from './views/error/error.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FieldContainerComponent } from './components/field-container/field-container.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		NavBarComponent,
 		ErrorComponent,
-		FieldContainerComponent
 	],
-	imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+	imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
 	providers: [],
 	bootstrap: [AppComponent],
 })

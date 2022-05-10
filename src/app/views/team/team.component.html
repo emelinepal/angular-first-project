@@ -1,24 +1,11 @@
 <h1>Team</h1>
 
-<div style="max-width: 250px;" [formGroup]="formGrp">
+<div class="card small-card" [formGroup]="formGrp">
 	<h2>Ajouter un membre</h2>
-	<div class="flex-column">
-		<label>Prénom</label>
-		<input type="text" formControlName="firstName">
-	</div>
+	<app-text-input [control]="formFirstName" id="firstName" label="Prénom"></app-text-input>
+	<app-text-input [control]="formLastName" id="lastName" label="Nom"></app-text-input>
+	<app-select-input [control]="formFramework" id="framework" label="Framework" [options]="frameworkOptions">
+	</app-select-input>
 
-	<div class="flex-column">
-		<label>Nom</label>
-		<input type="text" formControlName="lastName">
-	</div>
-	<div class="flex-column">
-		<label>Framework</label>
-		<select formControlName="framework">
-			<option value="angular">Angular</option>
-			<option value="vue">Vue</option>
-			<option value="react">React</option>
-		</select>
-	</div>
-
-	<button (click)="addUser()">Ajouter</button>
+	<button (click)="addUser()" class="btn btn-dark">Ajouter</button>
 </div>

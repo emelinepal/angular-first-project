@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { SelectOption } from 'src/app/interfaces/select-option';
 
 @Component({
 	selector: 'app-team',
@@ -14,22 +15,26 @@ export class TeamComponent implements OnInit {
 	});
 
 	get formFirstName() {
-		return this.formGrp.get('firstName');
+		return this.formGrp.get('firstName') as FormControl;
 	}
 	get formLastName() {
-		return this.formGrp.get('lastName');
+		return this.formGrp.get('lastName') as FormControl;
 	}
 	get formFramework() {
-		return this.formGrp.get('framework');
+		return this.formGrp.get('framework') as FormControl;
 	}
+
+	frameworkOptions: SelectOption[] = [
+		{ name: 'Angular', value: 'angular' },
+		{ name: 'Vue', value: 'vue' },
+		{ name: 'React', value: 'react' },
+	];
 
 	constructor() {}
 
 	ngOnInit(): void {}
 
 	addUser() {
-		console.log(this.formFirstName ? this.formFirstName.value : "");
-		console.log(this.formLastName ? this.formLastName.value : "");
-		console.log(this.formFramework ? this.formFramework.value : "");
+		console.log(this.formGrp.value);
 	}
 }
