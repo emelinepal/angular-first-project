@@ -1,0 +1,21 @@
+app-field-container {
+	label {
+		font-weight: bold;
+		color: #000;
+	}
+
+	input,
+	textarea,
+	select {
+		border-radius: 10px;
+		width: 100%;
+		padding: 10px;
+		margin-top: 5px;
+
+		border: 1px solid #6489ac;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

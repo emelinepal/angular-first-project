@@ -18,9 +18,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 	imports: [
 		CommonModule,
 		HttpClientModule,
-		BrowserModule, 
+		BrowserModule,
 		AppRoutingModule,
-		FormsModule, 
+		FormsModule,
 		ReactiveFormsModule,
 	],
 	providers: [],

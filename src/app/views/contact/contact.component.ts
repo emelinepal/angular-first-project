@@ -20,7 +20,13 @@ export class ContactComponent implements OnInit {
 	ngOnInit (): void {
 	}
 
-	get formSubject () {
-		return this.form.get('subject');
+	get formSubject() {
+		return this.form.get('subject') as FormControl;
+	}
+	get formEmail() {
+		return this.form.get('email') as FormControl;
+	}
+	get formMessage() {
+		return this.form.get('message') as FormControl;
 	}
 }

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { UserModel } from "../../models/user.model";
-import { HttpService } from "../../services/http.service";
-import { UsersService } from "../../store/users.service";
+import { SelectOption } from 'src/app/interfaces/select-option';
+import { UserModel } from '../../models/user.model';
+import { HttpService } from '../../services/http.service';
+import { UsersService } from '../../store/users.service';
 
 @Component({
 	selector: 'app-team',
@@ -16,25 +17,34 @@ export class TeamComponent implements OnInit {
 		framework: new FormControl(),
 	});
 
-	constructor(public httpService: HttpService, public userStore: UsersService) {}
+	constructor(
+		public httpService: HttpService,
+		public userStore: UsersService
+	) {}
 
 	ngOnInit(): void {
-		this.httpService.getUsers()
+		this.httpService.getUsers();
 	}
 
-	get users () {
-		return this.userStore.users
+	get users() {
+		return this.userStore.users;
 	}
 
 	get formFirstName() {
-		return this.formGrp.get('firstName');
+		return this.formGrp.get('firstName') as FormControl;
 	}
 	get formLastName() {
-		return this.formGrp.get('lastName');
+		return this.formGrp.get('lastName') as FormControl;
 	}
 	get formFramework() {
-		return this.formGrp.get('framework');
+		return this.formGrp.get('framework') as FormControl;
 	}
+
+	frameworkOptions: SelectOption[] = [
+		{ name: 'Angular', value: 'angular' },
+		{ name: 'Vue', value: 'vue' },
+		{ name: 'React', value: 'react' },
+	];
 
 	addUser() {
 		const firstname = this.formFirstName?.value
@@ -52,7 +62,7 @@ export class TeamComponent implements OnInit {
 		}
 	}
 
-	removeUser (userId: number) {
-		this.httpService.removeUser(userId)
+	removeUser(userId: number) {
+		this.httpService.removeUser(userId);
 	}
 }

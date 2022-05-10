@@ -1,41 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400&display=swap");
 
 // Global
 $dark-blue: #00295b;
+$white: #fdfefc;
 
-body{
-    background-color: #000000;
-    color: #fdfefc;
-    font-family: 'Raleway', sans-serif;
-    max-width: 100vw;
-    overflow-x: hidden;
+body {
+	background-color: #000000;
+	color: $white;
+	font-family: "Raleway", sans-serif;
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 // Utile
 
-main{
-    margin: 0 50px;
+.flex {
+	display: flex;
 }
 
-.flex{
-    display: flex;
+.flex-column {
+	display: flex;
+	flex-direction: column;
 }
 
-.flex-column{
-    display: flex;
-    flex-direction: column;
+.align-center {
+	align-items: center;
 }
 
-.align-center{
-    align-items: center;
+.justify-center {
+	justify-content: center;
 }
 
-.justify-center{
-    justify-content: center;
-}
-
-.justify-between{
-    justify-content: space-between;
+.justify-between {
+	justify-content: space-between;
 }
 
 a {
@@ -47,42 +48,65 @@ a {
 }
 
 .btn {
-    background: #fff;
-    border-radius: 50px;
-    padding: 15px 35px;
-    color: #000000;
-    font-size: 16px;
-    margin: 5px 0;
-    border: 3px solid white;
-    transition: all .1s;
-    cursor: pointer;
+	background: #fff;
+	border-radius: 50px;
+	padding: 15px 35px;
+	color: #000000;
+	font-size: 16px;
+	margin: 5px 0;
+	border: 3px solid white;
+	transition: all 0.1s;
+	cursor: pointer;
 
-    &:hover{
-        background: none;
-        color: white;
-    }
+	&:hover {
+		background: none;
+		color: white;
+	}
 
-    &.btn-dark{
-        background: #000000;
-        color: white;
-        border: 3px solid #000000;
-        transition: all .1s;
-        cursor: pointer;
+	&.btn-dark {
+		background: #000000;
+		color: white;
+		border: 3px solid #000000;
+		transition: all 0.1s;
+		cursor: pointer;
 
-        &:hover{
-            background: none;
-            color: #000000;
-        }
-    }
+		&:hover {
+			background: none;
+			color: #000000;
+		}
+	}
 }
 
-main{
+main {
+	margin: 0 50px;
 
-    h1{
-        margin: 70px 0;
-        padding: 0;
-        font-size: 75px;
-        font-weight: 700;
-        line-height: .9;
-    }
+	h1 {
+		margin: 70px 0;
+		padding: 0;
+		font-size: 75px;
+		font-weight: 700;
+		line-height: 0.9;
+	}
+}
+
+.card {
+	padding: 25px;
+	background: $white;
+	border-radius: 15px;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	color: #000000;
+
+	&.small-card {
+		max-width: 350px;
+	}
+
+	h2 {
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+}
+
+.field {
+	display: block;
+	margin-bottom: 20px;
 }
