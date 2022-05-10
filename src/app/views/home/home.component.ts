@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  isTriggeredLuigi = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  triggerLuigi(){
+    console.log('test');
+    this.isTriggeredLuigi = true;
   }
 
 }

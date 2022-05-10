@@ -1,0 +1,7 @@
+<article class="article-item" [ngClass]="{'item--clicked':clicked}" (click)="likeArticle(content.index)">
+    <div class="article-img" [style.background-img]="content.img"></div>
+    <div>
+        <h3>{{content.title}}</h3>
+        <p>{{content.description}}</p>
+    </div>
+</article>

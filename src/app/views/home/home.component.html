@@ -1,6 +1,6 @@
-<main>
+<main [ngClass]="{'luigi-triggered':isTriggeredLuigi}">
     <section class="flex align-center no-margin hero-section">
-        <div class="w-50 col-p">
+        <div class="w-50 p-right">
             <h1>
                 Discover our
                 <br>
@@ -9,7 +9,7 @@
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at nunc id leo pretium tempus. Nulla finibus leo at neque efficitur pellentesque.
             </p>
-            <button class="btn">
+            <button class="btn" (click)="triggerLuigi()">
                 Let's go 
             </button>
         </div>
