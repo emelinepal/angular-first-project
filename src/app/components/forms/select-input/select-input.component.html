@@ -1,5 +1,5 @@
 <app-field-container [for]="id" [label]="label">
 	<select [id]="id" [formControl]="control">
-		<option *ngFor="let o of options" [value]="o | json" >{{o.name}}</option>
+		<option *ngFor="let o of options" [value]="o.value" >{{o.name}}</option>
 	</select>
 </app-field-container>

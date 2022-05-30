@@ -31,8 +31,14 @@
 						"inlineStyleLanguage": "scss",
 						"assets": [
 							"src/favicon.ico",
-							"src/assets"
+							"src/assets",
+							{
+								"glob": "**/*",
+								"input": "./node_modules/ngx-ds-secret-house/assets",
+								"output": "./assets/"
+							}
 						],
+						"preserveSymlinks": true,
 						"styles": [
 							"src/styles.scss"
 						],
